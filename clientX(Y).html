@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<style type="text/css">
+	div{
+		height: 100px;
+		width: 100px;
+		background-color: green;
+	}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var odiv=document.getElementById("ant");
+		var ospan=document.getElementById("span");
+		odiv.onmousemove=function(e){
+			var e=e||event;
+			ospan.innerHTML="坐标值X："+e.clientX+"<br>坐标值Y: "+e.clientY;
+			console.log(e);
+		}
+	}
+
+	</script>
+<body>
+	<div id="ant"></div>
+	<span id="span"></span>
+</body>
+</html>
