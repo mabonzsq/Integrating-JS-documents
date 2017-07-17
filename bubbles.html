@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	div,p,span{
+		margin: 0px auto;
+	}
+	div{
+		width: 200px;
+		height: 200px;
+		background-color: #639;
+	}
+	p{
+		width: 150px;
+		height: 150px;
+		background-color: #f60;
+	}
+	span{
+		width: 100px;
+		height: 100px;
+		display: block;
+		background-color: #030;
+	}
+</style>
+<script type="text/javascript">
+		window.onload=function(){
+			var ospan=document.getElementById("span");
+			ospan.onclick=function(ev){
+				if (ev.bubblese) {
+					alert("事件是冒泡类型");
+				}
+				else{
+					alert("事件不是冒泡类型");
+				}
+			}
+		}
+</script>
+<body>
+	<div id="box">
+		<p>
+			<span id="span"></span>
+		</p>
+
+	</div>
+</body>
+</html>
