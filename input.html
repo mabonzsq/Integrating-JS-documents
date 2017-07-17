@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<script type="text/javascript">
+	 window.onload=function(){
+	 	var otex=document.getElementById("tex");
+	 	var odic=document.getElementById("show");
+	 	var chunt=0;
+	 	if (document.all) {
+	 		otex.onpropertychange=function(){ //onpropertychange为了兼容9以下的ie
+	 			chunt=chunt+1;
+	 			odic.innerHTML=chunt;
+	 		}
+	 	}
+	 	else{
+	 		otex.oninput=function(){
+	 			chunt=chunt+1;
+	 			odic.innerHTML=chunt;
+	 		}
+	 	}
+	 }
+
+
+	</script>
+
+
+
+
+
+<body>
+	 <div id="show"></div>
+	 <input type="text" name="tex" id="tex" value="庄世权js">
+</body>
+</html>
