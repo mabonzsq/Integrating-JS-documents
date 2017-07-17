@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=" utf-8">
+<meta name="author" content="http://www.softwhy.com/" />
+<title>zsq</title>
+<style> 
+div{ 
+  width:100px; 
+  height:100px; 
+  background-color:#ccc; 
+} 
+</style> 
+<script type="text/javascript"> 
+window.onload=function(){ 
+  var obox = document.getElementById("box");
+  obox.onclick = function (ev) {
+    var oEvent=ev||event; 
+    alert(oEvent.type); 
+  } 
+} 
+</script> 
+</head> 
+<body> 
+<div id="box"></div> 
+</body> 
+</html>
