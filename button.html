@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<style type="text/css">
+	div{
+		width: 200px;
+		height: 100px;
+		background-color: #639;
+		margin: :0px auto;
+	}
+	#show{
+		background-color: #fff;
+		text-align: center;
+		height: 30px;
+	}
+	</style>
+	<script type="text/javascript">
+	 window.onload=function(){
+	 	var show=document.getElementById("show");
+	 	var odiv=document.getElementById("ant");
+	 	odiv.onmousedown=function(e){
+	 		var e=e||event;
+	 		show.innerHTML=e.button; 
+	 	// 	（1）.返回0表示鼠标左键被点击。
+			// （2）.返回1表示鼠标中键被点击。
+			// （3）.返回2表示鼠标右键被点击。
+	 	}
+	 }
+
+	</script>
+<body>
+	<div id="show"></div>
+	<div id="ant"></div>
+</body>
+</html>
