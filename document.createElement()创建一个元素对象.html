@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	#ant{
+		height: 200px;
+		width: 300px;
+		background: green;
+		overflow: hidden;
+	}
+	p{
+		margin:0px auto;
+		margin-top: 20px;
+	}
+
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var odiv=document.getElementById("ant");
+		var p=document.createElement("p");
+		p.style.background="red";
+		p.style.width="100px";
+		p.style.height="100px";
+		odiv.appendChild(p);
+	}
+</script>
+<body>
+	<div id="ant"></div>
+</body>
+</html>
