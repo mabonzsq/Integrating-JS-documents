@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=" utf-8">
+<meta name="author" content="http://www.softwhy.com/" />
+<title>zsq</title>
+<style type="text/css">
+div{
+  width:200px;
+  height:100px;
+  background-color:#639;
+  margin:0px auto;
+}
+</style>
+<script type="text/javascript">
+window.onload=function(){
+  var odiv = document.getElementById("ant");
+  odiv.onmousedown = function (e) {
+  	 var e=e||event; //兼容低级浏览器
+    if(e.altKey==1){
+      alert("ALT键已经被按下");
+    }
+    else{
+      alert("ALT键没有被按下");
+    }
+  }
+}
+</script>
+</head>
+<body>
+  <div id="ant"></div>
+</body>
+</html>
