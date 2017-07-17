@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=" utf-8">
+<meta name="author" content="http://www.softwhy.com/" />
+<title>蚂蚁部落</title>
+<style type="text/css">
+
+#ant{
+  width:100px;
+  height:100px;
+  background-color:green;
+  text-align: center;
+}
+</style>
+<script type="text/javascript">
+window.onload=function(){
+  var odiv = document.getElementById("ant");
+  var ospan = document.getElementById("span");
+  odiv.onmousemove = function (event) {
+    ospan.innerHTML = "坐标值:X:" + event.screenX + " Y:" + event.screenY;
+  }
+}
+</script>
+</head>
+<body style="text-align:center">
+<div id="ant"></div>
+<span id="span"></span>
+</body>
+</html>
