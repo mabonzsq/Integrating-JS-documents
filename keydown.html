@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<script type="text/javascript">
+	window.onload=function(){
+		var otex=document.getElementById("tex");
+		var odiv=document.getElementById("ant");
+		otex.onkeydown=function(ev){
+			ev=ev||windonw.event;
+			odiv.innerHTML=ev.keyCode;
+			if (odiv.innerText==13) {
+			console.log("回车");
+		}
+		}
+		
+	}
+
+
+
+	</script>
+<body>
+	<input type="text" name="tex" id="tex">
+	<div id="ant"></div>
+</body>
+</html>
