@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var ck=document.getElementById("ck");
+			var odiv=document.getElementById("ant");
+			ck.onclick=function(ev){
+				if(ev.cancelable){
+					ev.preventDefault();
+					odiv.innerHTML="zsqjs";
+				}
+			}
+		}
+	</script>
+<body>
+	<input type="checkbox" id="ck">
+	<div id="ant"></div>
+</body>
+</html>
