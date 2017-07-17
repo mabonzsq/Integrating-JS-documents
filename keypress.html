@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script type="text/javascript">
+window.onload=function(){
+	var otex=document.getElementById("tex");
+	var odiv=document.getElementById("ant");
+	otex.onkeypress=function(ev){
+		ev=ev||window.event;
+		odiv.innerHTML=ev.keyCode;  // keydown kewup keypress
+
+	}
+
+}
+
+
+</script>
+<body>
+	<input type="text" id="tex" name="tex">
+	<div id="ant"></div>
+</body>
+</html>
