@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<script type="text/javascript">
+	window.onload=function(){
+		var osel=document.getElementById("sel");
+		var odiv=document.getElementById("thedic");
+		osel.onchange=function(){
+			odiv.innerHTML=osel.options[osel.selectedIndex].text;//selectedIndex就是这个数组的索引值，它对应的就是列表中该位置显示的项
+		}
+	}
+	</script>
+<body>
+<div id="thedic"> </div>
+	 <select id="sel">
+		<option value="1">蚂蚁部落一</option>
+		<option value="1">蚂蚁部落二</option>
+		<option value="1">蚂蚁部落三</option>
+		<option value="1">蚂蚁部落四</option>
+	 </select>
+</body>
+</html>
