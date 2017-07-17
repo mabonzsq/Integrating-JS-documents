@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	#ant{
+		width: 200px;
+		height: 200px;
+		background-color: #ccc;
+	}
+
+</style>
+<script type="text/javascript">
+window.onload=function(){
+	var odiv=document.getElementById("ant");
+		window.onresize=function(){
+			odiv.innerHTML="宽度"+document.documentElement.clientWidth+",高度："+document.documentElement.clientHeight;
+		}
+	}
+
+
+
+
+</script>
+<body>
+	 <div id="ant"></div>
+</body>
+</html>
