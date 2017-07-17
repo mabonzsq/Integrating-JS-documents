@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<style type="text/css">
+	#mydiv{
+		width: 100px;
+		height: 100px;	
+		background-color: green;
+	}
+
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var mydiv=document.getElementById("mydiv");
+		var myspan=document.getElementById("myspan");
+		mydiv.onmousemove=function(ev){
+			var oEven=ev||event; //因为获取坐标值的方法 是event.clientX和event.clientY 所以，用var oEven=en||event来让这条语句兼容ie浏览器
+			myspan.innerHTML="坐标值:x:"+oEven.clientX+"坐标值：y:"+oEven.clientY;
+		}
+	}
+
+
+
+
+
+	</script>
+<body>
+	<div id="mydiv"></div>
+	<span id="myspan"></span>
+</body>
+</html>
