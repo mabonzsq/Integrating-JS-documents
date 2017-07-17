@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html><!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset=" utf-8">  
+<meta name="author" content="http://www.softwhy.com/" />  
+<title>zsq</title> 
+<style type="text/css"> 
+div,p,span{ 
+  margin:0px auto; 
+} 
+div{ 
+  width:200px; 
+  height:200px; 
+  background-color:red; 
+} 
+p{ 
+  width:150px; 
+  height:150px; 
+  background-color:#F60; 
+} 
+span{ 
+  width:100px; 
+  height:100px; 
+  display:block; 
+  background-color:#030; 
+} 
+</style> 
+<script type="text/javascript"> 
+window.onload=function(){ 
+  var obox = document.getElementById("box");
+  obox.onclick = function (ev) {
+    var oEvent=ev||event; 
+    var currentTarget = event.currentTarget;
+    alert(currentTarget.id);
+  } 
+  // 点击div、p或者span任何一个元素，所弹出的都是div的id属性值，这是因为只有div注册有事件处理函数，只有它能够接收到事件并能够处理事件，其他的对象尽管能够接收到事件，但是并不能够处理事件。
+} 
+</script> 
+</head> 
+<body> 
+<div id="box"> 
+  <p id="p"> 
+   <span id="span"></span> 
+  </p> 
+</div> 
+</body> 
+</html>
