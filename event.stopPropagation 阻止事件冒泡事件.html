@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<style type="text/css">
+	#box{
+		width:400px;
+		height: 200px;
+		background: red;
+
+	}
+	#inner{
+		width: 200px;
+		height: 100px;
+		margin: 0px auto;
+		background: green;
+	}
+
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var obox=document.getElementById("box");
+		var oinner=document.getElementById("inner");
+		var oshow=document.getElementById("show");
+		var str="";
+		obox.onclick=function(){
+			str=str+"<br/>父元素click事件触发"
+			oshow.innerHTML=str;
+			oinner.onclick=function(e){
+				var e=e||event;
+				e.stopPropagetion();
+			}
+		}
+	}
+
+	</script>
+<body>
+	 <div id="box">
+		<div id="inner"></div>
+	 </div>
+	 <div id="show"></div>
+</body>
+</html>
