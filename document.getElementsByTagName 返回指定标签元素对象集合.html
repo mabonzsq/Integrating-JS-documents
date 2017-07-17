@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css"> 
+ul,li { 
+  list-style:none; 
+} 
+</style> 
+<script type="text/javascript">
+window.onload=function(){
+	var lis=document.getElementsByTagName("li"); //获取元素的标签 不需要name值
+	var odiv=document.getElementById("show");
+	odiv.innerHTML=lis.length;
+}
+</script>
+<body>
+	<div id="show"></div>
+		<ul id="box">
+ 		 <li>zsq一</li>
+ 		 <li>zsq二</li>
+ 		 <li>zsq三</li>
+ 		 <li>zsq四</li>
+ 		 <li>zsq五</li>
+		</ul>
+</body>
+</html>
