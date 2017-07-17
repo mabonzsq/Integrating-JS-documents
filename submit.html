@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script type="text/javascript">
+	function checkForm(form){
+	if(form.username.value==""){
+		alert("用户名不能为空");
+		form.username.focus();//人性化设计，验证有没有填写 没有填写会自动把鼠标焦点切换到username的输入框
+		return false;
+	}
+	if(form.password.value==""){
+		alert("密码不能为空");
+		form.password.focus();
+		return false;
+	}
+	return true;
+}
+	window.onload=function(){
+		var myform=document.forms[0];
+		myform.onsubmit=function(){
+			return checkForm(this);
+		}
+	}
+	</script>
+</head>
+<body>
+	<form accept="#" method="post">
+	姓名：<input type="text" name="username">
+	密码：<input type="password" name="password">
+	<input type="submit" value="提交表单">
+	</form>
+</body>
+</html>
