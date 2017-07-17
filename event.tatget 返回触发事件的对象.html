@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=" utf-8">
+<meta name="author" content="http://www.softwhy.com/" />
+<title>zsq</title>
+<style> 
+div,p,span{ 
+  margin:0px auto; 
+} 
+div{ 
+  width:200px; 
+  height:200px; 
+  background-color:#639; 
+} 
+p{ 
+  width:150px; 
+  height:150px; 
+  background-color:#F60; 
+} 
+span{ 
+  width:100px; 
+  height:100px; 
+  display:block; 
+  background-color:#030; 
+} 
+</style> 
+<script> 
+window.onload=function(){ 
+  var obox = document.getElementById("box");
+  obox.onclick = function (ev) {
+    alert(ev.target.id);
+  } 
+} 
+</script> 
+</head> 
+<body> 
+<div id="box"> 
+  <p id="p"> 
+   <span id="span"></span> 
+  </p> 
+</div> 
+</body> 
+</html>
