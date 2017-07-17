@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	#father{
+		width: 200px;
+		height: 200px;
+		background-color: green;
+		margin: 0 auto;
+	}
+	#children{
+		width: 100px;
+		height: 100px;
+		margin: 0 auto;
+		background-color: red;
+	}
+
+
+</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var children=document.getElementById("children");
+		children.onmouseout=function(e){
+			alert(e.relatedTarget.id);
+		}
+	}
+	//（1）.对于mouseover事件，该属性返回鼠标指针移到目标节点上时所离开的那个节点对象的引用。
+	//（2）.对于mouseout事件来说，该属性返回鼠标指针离开目标时，鼠标指针进入的节点对象的引用。
+	</script>
+<body>
+	 <div id="father">
+		<div id="children"></div>
+	 </div>
+</body>
+</html>
