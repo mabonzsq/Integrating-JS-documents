@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	body{
+		height: 1200px;
+	}
+	#ant{
+		height: 100px;
+		width: 100px;
+		background-color: red;
+		text-align: center;
+		line-height: 100px;
+		position: fixed;
+	}
+
+</style>
+<script type="text/javascript">
+window.onload=function(){
+	var odiv=document.getElementById("ant");
+	window.onscroll=function(){
+		odiv.innerHTML=document.body.scrollTop||document.documentElement.scrollTop; // ||这样的写法是为了兼容低版本的浏览器
+	}
+}
+
+</script>
+<body>
+	<div id="ant"></div>
+</body>
+</html>
