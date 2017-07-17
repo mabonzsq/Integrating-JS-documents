@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+ 	<script type="text/javascript">
+ 	window.onload=function(){
+ 		var myform=document.getElementById("myform");
+ 		myform.onreset=function(){ //reset是清空已填写表单的内容
+ 			alert("事件触发");
+ 		}
+ 	}
+ 	</script>
+<body>
+	<form action="#" name="myform" id="myform">
+		<input type="reset" name="zz" value="重置">
+ 		<!-- 清空已填写表单的内容 type=“reset” -->
+	</form>
+</body>
+</html>
