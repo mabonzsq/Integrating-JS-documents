@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	#ant{
+		height: 1000px;
+		width: 1000px;
+		text-align: center;
+		background-color: green;
+
+	}
+	#aa{
+		position: absolute;  /*记住图片要加position属性*/
+	}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var odiv=document.getElementById("ant");
+		var oshow=document.getElementById("show");
+		var aa=document.getElementById("aa");
+		odiv.onmousemove=function(e){
+			var e=e||event;
+			var a=e.offsetX;
+			var b=e.offsetY;
+			oshow.innerHTML="坐标X："+e.offsetX+"坐标Y："+e.offsetY;
+		  	aa.style.left=a+"px";
+		  	aa.style.top=b+"px";
+		  	console.log(a,b);
+		}
+	}
+
+
+</script>
+<body>
+	<div id="ant">
+	<img src="u=3295709700,3308451376&fm=26&gp=0.jpg" id="aa">
+	</div>
+
+	<span id="show"></span>
+</body>
+</html>
