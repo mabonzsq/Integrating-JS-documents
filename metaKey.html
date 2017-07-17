@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	 <script type="text/javascript">
+	 window.onload=function(){
+	 	 document.body.onmousemove=function(e){
+	 	 	var e=e||event;
+	 	if(e.metaKey){
+	 		alert("meta键被按下");
+	 	}
+	 	else{
+	 		alert("meta键没有被按下");
+	 	}
+	 }
+	 }
+	 </script>
+</body>
+</html>
