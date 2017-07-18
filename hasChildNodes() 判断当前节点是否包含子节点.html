@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	window.onload=function(){
+		var odiv=document.getElementById("ant");
+		var ospan=document.getElementById("span");
+		ospan.innerHTML=odiv.hasChildNodes();
+		if (odiv.hasChildNodes()==true) { //判断当前节点是否有子节点，空格和换行都会被认作为文本节点。 程序是不可变的！
+			console.log("www");
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="ant">zsq1</div>
+	<span id="span"></span>
+</body>
+</html>

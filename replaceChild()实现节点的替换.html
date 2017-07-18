@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	ul li{
+		width: 150px;
+		height: 20px;
+		line-height: 20px;
+		list-style: none;
+	}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var obox=document.getElementById("box");
+		var obt=document.getElementById("bt");
+		var oli=document.getElementsByTagName("li");
+		var oll=document.createElement("li");
+		oll.innerHTML="zsq我";
+		obt.onclick=function(){
+			obox.replaceChild(oll,oli[1]);
+		}
+	}
+	</script>
+<!-- 	nodeObject.replaceChild(new_node,old_node)
+参数解析:
+（1）.nodeObject:父节点元素。
+（2）.new_node:用以替换旧节点的节点。
+（3）.old_node:将要被替换的旧节点。 -->
+</head>
+<body>
+	<ul id="box">
+	<li>zsq1</li>
+	<li>zsq2</li>
+	<li>zsq3</li>
+	<li>zsq4</li>
+	</ul>
+	<input type="button" id="bt" value="查看效果">
+</body>
+</html>

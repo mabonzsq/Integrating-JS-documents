@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	#source{
+		width: 100px;
+		height: 100px;
+		background-color: green;
+	}
+	#one,#two{
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		margin: 20px;
+	}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var os=document.getElementById("source");
+		var on=document.getElementById("one");
+		var tw=document.getElementById("two");
+		on.appendChild(os.cloneNode(false));
+		tw.appendChild(os.cloneNode(true));
+	}
+	</script>
+<!-- 		
+oldElement.cloneNode(bool deep)
+参数解析:
+（1）.oldElement:将要被克隆的元素。
+（2）.deep:一个布尔值，如果为false则只克隆节点本身，如果为true，则克隆节点本身和子节点。 -->
+</head>
+<body>
+	<div id="source">
+	zsq一
+	<span>zsq二</span>
+	</div>
+	<div id="one"></div>
+	<div id="two"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	window.onload=function(){
+		var obox=document.getElementById("box");
+	var liArry=[];
+	var arrIndex=0;
+	var childnodes=obox.childNodes;
+	for(var index=0;index<childnodes.length;index++){
+		if(childnodes[index].nodeType==1){
+			liArry[arrIndex]=childnodes[index];
+			arrIndex=arrIndex+1;
+		}
+	}
+	obox.removeChild(liArry[1]);
+	}
+	</script>
+
+</head>
+<body>
+	<ul id="box">
+  <li>zsq一</li>
+  <li>zsq二</li>
+  <li>zsq三</li>
+  <li>zsq四</li>
+</ul>
+</body>
+</html>

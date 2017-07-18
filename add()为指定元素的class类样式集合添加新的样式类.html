@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+.a{color:blue}
+.b{font-size:12px}
+.c{font-weight:bold;}
+.d{text-decoration:line-through;}
+</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oant=document.getElementById("ant");
+	  var tt=oant.classList;
+	  tt.add("d"); //增加一个class，但不会替换原来的 用setAttribute会替换原有的
+	}
+	</script>
+<!-- classList.add(className);
+参数解析:
+className:必需，要被添加的class类名称。 -->
+</head>
+<body>
+	<div id="ant" class="a b c">zsq</div>
+</body>
+</html>

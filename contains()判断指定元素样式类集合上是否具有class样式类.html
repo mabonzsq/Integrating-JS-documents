@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+.a{color:blue}
+.b{font-size:80px}
+.c{font-weight:bold;}
+
+</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oant=document.getElementById("ant");
+		var tt=ant.classList;
+		oant.innerHTML=tt.contains("b");
+	}
+	</script>
+<!-- 	classList.contains(className)
+参数解析:
+className：必需，要判断是否存在的class样式类的名称。 -->
+</head>
+<body>
+	<div id="ant" class="a b c">zsq1</div>
+</body>
+</html>	

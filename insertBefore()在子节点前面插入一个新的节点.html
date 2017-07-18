@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var obox=document.getElementById("box");
+			var oli=document.getElementsByTagName("li");
+			var newli=document.createElement("li");
+			newli.innerHTML="zsqwww";
+			obox.insertBefore(newli,oli[1]);//oli[]可以设计为null 设为null的话，会默认添加在最后面，和appendChild的方法一样
+		}
+		// target.insertBefore(newChild,existingChild)
+// （1）.target:被添加节点和现有节点的父节点。
+// （2）.newChild:将要被插入的节点。
+// （3）.existingChild:现有节点，新节点将会被插入到它的前面，此参数值可以为null。
+	</script>
+</head>
+<body>
+	<ul id="box">
+  <li>zsq一</li>
+  <li>zsq二</li>
+  <li>zsq三</li>
+  <li>zsq四</li>
+</ul>
+</body>
+</html>

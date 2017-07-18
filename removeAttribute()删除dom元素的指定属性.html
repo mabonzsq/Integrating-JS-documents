@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	window.onload=function(){
+		var otex=document.getElementById("tex");
+		var obtn=document.getElementById("btn");
+		obtn.onclick=function(){
+			otex.removeAttribute("disabled");
+		}
+	}
+	</script>
+<!-- 	elementNode.removeAttribute(name)
+参数解析:
+（1）.elementNode:要删除属性的元素节点对象。
+（2）.name:属性名称。 -->
+</head>
+<body>
+	<input type="text" disabled="disabled" value="zsq1" id="tex">
+	<input type="button" id="btn" value="查看效果">
+</body>
+</html>
