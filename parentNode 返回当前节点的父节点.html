@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+div {
+  width:300px;
+  height:200px;
+  text-align:center;
+  line-height:200px;
+}
+</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var op=document.getElementById("tex");
+		var ote=document.getElementById("bt");
+		var tt=op.parentNode;
+		ote.onclick=function(){
+			tt.style.backgroundColor="#ccc";
+		}
+	}
+	</script>
+</head>
+<body>
+	<div>
+		<p id="tex">zsq</p>
+	</div>
+	<input type="button" id="bt" value="查看效果">
+</body>
+</html>
