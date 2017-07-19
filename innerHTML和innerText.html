@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=" utf-8">
+<meta name="author" content="http://www.softwhy.com/" />
+<title>蚂蚁部落</title>
+<script type="text/javascript"> 
+window.onload=function(){
+  var content=document.getElementById("content");
+  alert(content.innerHTML);
+  alert(content.innerText);
+}
+// innerHTML可以返回指定元素中的HTML内容（包含元素下的HTML标签）；innerText属性只会返回文本内容，不包含会被浏览器解析的HTML标签。特别说明:innerText非标准属性，建议不要使用，这里权做演示。
+</script>
+</head>
+<body>
+<div id="content"><b>蚂蚁部落</b></div>
+</body>
+</html>
