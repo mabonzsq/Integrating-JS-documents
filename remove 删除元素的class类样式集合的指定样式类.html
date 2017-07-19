@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.a{color:blue}
+.b{font-size:12px}
+.c{font-weight:bold;}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oant=document.getElementById("ant");
+		var list=oant.classList;
+		list.remove("a");
+	}
+	</script>
+<!-- 	classList.remove(className);
+参数解析:
+className:必需，要被删除的class类名称。 -->
+</head>
+<body>
+	<div id="ant" class="a b c">zsq</div>
+</body>
+</html>
