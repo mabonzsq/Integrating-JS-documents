@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	window.onload=function(){
+		var os=document.getElementById("show");
+		var obox=document.getElementById("box");
+		var fff=obox.firstChild;
+		while(fff.nodeType!=1){
+			fff=fff.nextSibling; //返回选定节点的下一个同级节点
+		}
+		show.innerHTML=fff.innerHTML;
+	}
+	</script>
+<!-- 	具有浏览器兼容性问题，在IE8和IE8以下浏览器中显示的类型为1，说明是元素节点，但是在IE8以上和其他标准浏览器中，显示值为3，说明是文本节点。这是因为在标准浏览器中，会将空格或者换行作为文本节点，而在IE8和IE8以下浏览器中则忽略 -->
+</head>
+<body>
+	<div id="show"></div>
+<ul id="box">
+  <li>zsq一</li>
+  <li>zsq二</li>
+  <li>zsq三</li>
+  <li>zsq四</li>
+</ul>
+</body>
+</html>
