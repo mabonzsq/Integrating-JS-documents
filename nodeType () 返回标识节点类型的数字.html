@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oshow=document.getElementById("show");
+	var obox=document.getElementById("box");
+	var lis=document.querySelectorAll("li");
+	oshow.innerHTML=lis[1].nodeType;
+	}
+	</script>
+<!-- 	返回值说明:
+（1）.元素节点:1。
+（2）.文本节点:3。
+（3）.document文档节点:9。
+（4）.注释节点:8。
+（5）.documentType节点:10。
+（6）.documentFragment节点:11。 -->
+</head>
+<body>
+	<div id="show"></div>
+	<ul id="box">
+		<li>zsq1</li>
+		<li>zsq2</li>
+	</ul>
+</body>
+</html>
