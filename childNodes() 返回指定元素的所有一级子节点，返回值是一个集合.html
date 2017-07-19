@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=" utf-8">
+<meta name="author" content="http://www.softwhy.com/" />
+<title>sq</title>
+<script type="text/javascript">
+window.onload=function(){
+  var thediv=document.getElementById("thediv");
+  var bt=document.getElementById("bt");
+  bt.onclick = function () {
+    alert(thediv.childNodes.length);
+  }
+}
+</script>
+</head>
+<body>
+<div id="thediv">
+  <div></div>
+  <div></div>
+</div>
+<input type="button" id="bt" value="点击查看" />
+</body>
+</html>
