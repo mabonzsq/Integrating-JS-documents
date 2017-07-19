@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oshow=document.getElementById("show");
+		var obox=document.getElementById("box");
+		var obt=document.getElementById("bt");
+		var tt=box.lastChild;
+bt.onclick=function(){
+	while(tt.nodeType!=1){
+			tt=tt.previousSibling;
+		}
+		oshow.innerHTML=tt.innerHTML;
+
+		}
+	
+	}
+	</script>
+<body>
+	<div id="show"></div>
+	<ul id="box">
+  <li>zsq一</li>
+  <li>zsq二</li>
+  <li>zsq三</li>
+  <li>zsq四</li>
+  <li>zsq五</li>
+</ul>
+<input type="button" id="bt" value="查看效果"/>
+</body>
+</html>
