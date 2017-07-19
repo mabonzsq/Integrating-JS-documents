@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset=" utf-8"> 
+<meta name="author" content="http://www.softwhy.com/" /> 
+<title>zsq</title> 
+<script>  
+window.onload=function(){
+  var obt=document.getElementById("bt");
+  var odiv = document.getElementById("ant");
+  var textNode = document.createTextNode("zsq");
+  odiv.appendChild(textNode);
+  obt.onclick=function(){
+    textNode.nodeValue= "zsq一";// 为什么不用innerHTML呢，因为这边创建的是createTextNode 是文本类型，innerHTML和innerText都不能改变 只能用nodeValue
+  } 
+}
+</script>  
+<!-- nodeValue属性用来设置或者返回指定节点的值。可以设置值，也可以返回已经有的值
+此属性根据节点类型的不同而有所不同:
+（1）.文本节点:nodeValue属性值就是文本节点的内容。
+（2）.属性节点:nodeValue属性值就是属性节点的值。
+（3）.文档节点和元素节点:nodeValue属性是不可用的。 -->
+</head>  
+<body>
+<div id="ant"></div>
+<input type="button" id="bt" value="查看效果"/>
+</body>  
+</html>
