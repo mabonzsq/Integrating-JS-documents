@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	window.onload=function(){
+		var odiv=document.getElementById("ant");
+		odiv.innerHTML=odiv.childNodes[0].nodeName; //因为子节点是文本 所以返回#text
+	}
+	</script>
+</head>
+<body>
+	<div id="ant">zzz</div>
+</body>
+</html>
