@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+.a{color:blue}
+.b{font-size:12px}
+.c{font-weight:bold;}
+</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oant=document.getElementById("ant");
+		var obt=document.getElementById("bt");
+		var tee=oant.classList;
+		obt.onclick=function(){
+			tee.toggle("a");
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="ant" class="a b c">zsq</div>
+	<input type="button" id="bt" value="查看效果">
+</body>
+</html>
