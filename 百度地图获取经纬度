@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	  <script type ="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=s"></script>
+        <script>
+        var olng;
+        var geolocation = new BMap.Geolocation();
+        //得到源坐标
+        geolocation.getCurrentPosition(function(r){
+            if(this.getStatus() == BMAP_STATUS_SUCCESS){
+                //得到点坐标
+                var point = new BMap.Point(r.point.lng,r.point.lat);
+                    olng = r.point.lng;
+                var olat = r.point.lat;
+                 alert("经度"+olng+"纬度"+olat);
+            }else {
+
+                alert('failed'+this.getStatus());
+            }      
+
+        },{enableHighAccuracy: true});
+
+      
+    </script>
+</head>
+<body>
+	
+</body>
+</html>
