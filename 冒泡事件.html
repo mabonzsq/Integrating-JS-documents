@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>冒泡事件</title>
+	</head>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+
+
+<body>
+	<script type="text/javascript">
+var flag, array  = [101,645,453,6,3,321,77,98,107,55];
+$('body').append(`<div>${array.toString()}</div>`)
+for(let i=0;i<array.length-1;i++){
+    for(let j=0;j<array.length-1-i;j++){
+        if(array[j]>array[j+1]){
+            flag = array[j];
+            array[j] = array[j+1];
+            array[j+1]=flag;
+        }
+    }
+}
+$('body').append(`<button id="px" >排序</button>`)
+$('#px').on("click",function(){
+    $('body').append(`<div>${array.toString()}</div>`)
+}) 
+</script>
+</body>
+</html>
