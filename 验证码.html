@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js验证码</title>
+</head>
+<style type="text/css">
+	.code{
+		color:blue;
+		background:url(code_bg.png);
+		font-family: "黑体";
+		font-style: italic;
+		font-size: 30px;
+		border: 0px;
+		padding: 2px 3px;
+		letter-spacing: 3px;
+		font-weight: bold;
+		cursor: pointer;
+		width: 160px;
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		vertical-align: middle;
+
+	}
+	a{
+		text-decoration: none;
+		cursor: pointer;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+</style>
+<script type="text/javascript">
+	var code;
+	function changecode()
+	{
+		code = "";
+		var codelenght = 6;
+		var ocode = document.getElementById("checkcode");
+		var codearr = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 
+      'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+
+		for(var i =0;i<codelenght;i++)
+		{
+			var ocodearr = Math.floor(Math.random()*52);
+			code += codearr[ocodearr];
+		
+		}
+	if(checkcode){
+		ocode.className = "code";
+		ocode.innerHTML = code;
+	}
+	}
+	function codeok(){
+		var otex = document.getElementById("input_id").value;
+		if(otex.length<=0){
+			alert("请输入验证码！");
+		}
+		else if(otex.toUpperCase()!=code.toUpperCase()){
+			alert("验证码有误，请重新输入！");
+			changecode();
+		}
+		else{
+			alert("验证成功！");
+		}
+	}
+</script>
+<body onload="changecode()">
+	<form id="form_id" runat="server" onsubmit="codeok()">
+	<div>
+	<div class="code" id="checkcode" onclick="changecode()">
+	</div>
+	<a onclick="changecode()">看不清换一张</a>
+	</div>
+	<div>
+		<span>验证码</span>
+		<input type="text" id="input_id" placeholder="请输入验证码">
+	</div>
+	<input type="button" id="btn" value="确定" onclick="codeok()">
+	</form>
+</body>
+</html>
