@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>test</title>
+
+    <style type="text/css">
+
+        *{ margin:0; padding:0;}
+
+        body{font:12px/1 '微软雅黑';background: #fff;}
+
+        .wrap{ width:140px; padding:10px;}
+
+        .info{ padding-top:10px; overflow:hidden;}
+
+        .inner{ width:1000px;height:172px; height:17px; line-height:17px; overflow:hidden;}
+
+        .inner p{ display:inline-block;}
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="wrap">
+
+
+    <div id="info" class="info">
+
+        <div class="inner">
+
+            <p class="txt">文字如果超出了自动向左滚动</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    function scroll(){
+
+        var info = document.getElementById('info');
+
+        var div = info.getElementsByTagName('div')[0];
+
+        var p = document.getElementsByTagName('p')[0];
+
+        var p_w = p.offsetWidth;
+
+        var div_w = info.offsetWidth;
+
+        if(div_w > p_w){ return false; }
+
+        div.innerHTML += div.innerHTML;
+
+
+
+        setInterval(function(){
+
+            if(p_w <= info.scrollLeft){
+
+                info.scrollLeft -= p_w;
+
+            } else {
+
+                info.scrollLeft++;
+
+            }
+
+        }, 30);
+
+    }
+
+    scroll();
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
