@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js轮播</title>
+    <style>
+        img{
+            width: 100%;
+        }
+        .main{
+
+            width: 800px;
+            overflow: hidden;
+            position: relative;
+            top: 100px;
+            left: 200px;
+        }
+     ul{
+         display: flex;
+         justify-content: flex-start;
+         flex-direction: row;
+         padding: 0px;
+         width: 6000px;
+         transition: all 2s;
+     }
+        li{
+            width: 800px;
+            list-style: none;
+        }
+        .arrows{
+
+            width: 800px;
+            position: absolute;
+           top: 230px;
+            z-index: 999;
+        }
+        .arrows span{
+                font-size: 3rem;
+            color: #fff;
+        }
+        .arrows span:hover{
+            cursor: pointer;
+            background-color: rgba(192, 192, 192, 0.29);
+        }
+        .btn{
+
+            border-radius: 100px;
+            background-color: aquamarine;
+            width: 60px;
+            height: 10px;
+            margin-left: 10px;
+            margin-top: 130px;
+
+        }
+        .btn:hover{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <ul class="ulimg">
+            <li class="liimg"><img src="chao.jpg"></li>
+            <li class="liimg"><img src="timg.jpg"</li>
+            <li class="liimg"><img src="jia.jpg"></li>
+            <li class="liimg"><img src="telan.jpg"></li>
+        </ul>
+        <div class="arrows">
+            <span title="1" class="arrow"><</span>
+            <span title="0" class="arrow" style="float: right;">></span>
+
+        </div>
+    </div>
+    <div style="margin-left: 500px; display: flex; justify-content: flex-start;flex-direction: row;">
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+    </div>
+    <script>
+
+        var count = 0;   //跑动的次数
+        var isgo = false;//动画的执行方向
+        var timer;//定义计时器对象
+
+        window.onload = function () {
+            var oulimg = document.getElementsByClassName("ulimg")[0];
+            var oliimg = document.getElementsByClassName("liimg");
+
+
+        function showtime() {
+            timer = setInterval(function () {
+                if(isgo == false) {
+                    count++;
+                    //transform:translate()：含义：变动，位移；如下表示向右位移120像素，如果向上位移，
+                    // 把后面的“0”改个值就行，向左向下位移则为负“-”。
+                    oulimg.style.transform = "translate(" + -800 * count + "px)";
+
+                    if (count >= oliimg.length - 1) {
+
+                        count = oliimg.length - 1;
+                        isgo = true;
+                    }
+                }
+                    else{
+                        count--; //count = count-1
+                        oulimg.style.transform = "translate(" + -800 * count + "px)";
+                        if(count <=0){
+                            count = 0;
+                            isgo = false;
+                        }
+                    }
+
+            },4000);
+        }
+        document.getElementById()
+            var arrow = document.getElementsByClassName("arrow");
+            for(var i = 0;i<arrow.length;i++){
+                arrow[i].onmouseover=function () {
+                    clearInterval(timer);
+                }
+                arrow[i].onmouseout=function () {
+                    showtime();
+                }
+                arrow[i].onclick=function () {
+                    if(this.title==0){
+                        count++;
+                        if(count>3){
+                            count=0;
+                        }
+                    }
+                    else{
+                        count--;
+                        if(count<0){
+                            count=3;
+                        }
+                    }
+                    oulimg.style.transform="translate(" + -800 * count + "px)";
+                }
+
+            }
+            var btn = document.getElementsByClassName("btn");
+            for(let j = 0;j<btn.length;j++){
+                btn[j].onmouseover=function () {
+                    clearInterval(timer);
+                    this.index = j;
+                if(this.index==3){
+                    isgo=true;
+                }
+                else{
+                    isgo=false;
+                }
+                count=this.index;
+                    oulimg.style.transform="translate(" + -800 * count + "px)";
+                }
+                btn[j].onmouseout=function () {
+                    showtime();
+                }
+
+            }
+            showtime();
+        }
+    </script>
+</body>
+</html>
