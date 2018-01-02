@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文字轮播</title>
+	<style type="text/css">
+		 .info{  overflow:hidden;}
+        .inner{ width:10000px;overflow:hidden;}
+        .inner p{ display:inline-block;color: red;font-size: 15px; margin-bottom: 0px;}
+	</style>
+</head>
+<body>
+	 <div style="position: absolute;top: 15%;left: 5%; width: 20%;">
+	 	<div style="display: flex;justify-content: center;align-items: center;">
+	 	
+    	<div id="info" class="info" style="margin-left: 2%;">
+        <div class="inner">
+            <a href="<{:U('mobile/ele/eleaddr',array('order_id'=>$order['order_id']))}>"><p class="intxt">挖掉啊倒萨打算等我按到撒旦我阿德萨等我打算打算等我倒萨等我</p></a>
+        </div>
+    	</div>
+     </div>
+    </div>
+	<script>
+
+    function scroll(){
+
+        var info = document.getElementById('info');
+
+        var div = document.getElementsByClassName("inner")[0];
+
+        var p = document.getElementsByTagName('p')[0];
+       
+		
+        var p_w = p.offsetWidth; //offsetWidth 是对象的可见宽度，包滚动条等边线，会随窗口的显示大小改变
+        var pp = p.length;
+ 	
+        var div_w = info.offsetWidth;
+	
+        if(div_w > p_w){ return false; }
+    
+        div.innerHTML += div.innerHTML;  
+        //相当于div.innerHTML = div.innerHTML+div.innerHTML
+
+
+	
+     var a = setInterval(function(){
+
+//         	有两个值一个是：scrollTop一个是scrollLeft
+// 第一个代表页面利用滚动条滚动到下方时，隐藏在滚动条上方的页面的高度；
+// 第二个代表页面利用滚动条滚动到右侧时，隐藏在滚动条左侧的页面的宽度
+	//scrollLeft：是该元素的显示（可见）的内容与该元素实际的内容的距离。
+		
+            if(p_w <= info.scrollLeft){
+
+                clearInterval(a);
+                // info.scrollLeft = info.scrollLeft-p_w;
+		
+            } else {
+
+                info.scrollLeft++;
+                // info.scrollLeft = info.scrollLeft+1;
+               
+           
+            }
+
+        }, 30);
+
+    }
+
+    scroll();
+
+</script>
+</body>
+</html>
